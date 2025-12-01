@@ -1,5 +1,7 @@
 # 🔐 AI-Based Cyber Security Threats Prediction AI Agent
 
+---
+
 ## 📝 Problem Statement  
 The project aims to develop intelligent **agentic AI systems** that act as autonomous and tireless guardians of network security. These AI agents will continuously monitor network traffic, detect anomalies, and respond to cyber threats in real time **without constant human supervision**. By leveraging AI-powered automation, the system will help organizations improve early threat detection, enhance resilience, and reduce dependence on human analysts for routine cybersecurity tasks.
 
