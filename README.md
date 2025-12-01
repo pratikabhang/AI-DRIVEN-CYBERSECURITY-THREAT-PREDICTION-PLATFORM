@@ -1,8 +1,5 @@
 # 🔐 AI-Based Cyber Security Threats Prediction AI Agent
 
-## 📘 Project Title  
-**AI-Based Cyber Security Threats Prediction AI Agent**
-
 ---
 
 ## 📝 Problem Statement  
