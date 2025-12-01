@@ -31,5 +31,3 @@ The project aims to develop intelligent **agentic AI systems** that act as auton
 2️⃣ **AI Model Development and Training**  
 3️⃣ **Real-time Threat Detection**  
 4️⃣ **Integration and Deployment**
-
----
