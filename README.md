@@ -33,9 +33,3 @@ The project aims to develop intelligent **agentic AI systems** that act as auton
 4️⃣ **Integration and Deployment**
 
 ---
-
-## 📌 Additional Highlights  
-- Uses both **Machine Learning (XGBoost)** and **Deep Learning (CNN-LSTM)** approaches.  
-- Supports **real-time prediction**, alert generation, and automated action (block/alert/log).  
-
----
