@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
@@ -28,6 +28,20 @@ interface AttackType {
   percentage: number;
 }
 
+function getEdgeFunctionErrorMessage(error: any): string {
+  const bodyError = error?.context?.body?.error;
+  if (typeof bodyError === 'string' && bodyError.trim()) return bodyError;
+
+  const message = error?.message;
+  if (typeof message === 'string' && message.trim()) return message;
+
+  try {
+    return JSON.stringify(error);
+  } catch {
+    return 'Unknown error';
+  }
+}
+
 export function useSecurityStats() {
   const [stats, setStats] = useState<SecurityStats>({
     totalThreats: 0,
@@ -43,19 +57,80 @@ export function useSecurityStats() {
   const [threatTrends, setThreatTrends] = useState<ThreatTrend[]>([]);
   const [attackTypes, setAttackTypes] = useState<AttackType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isRoleLoading, setIsRoleLoading] = useState(true);
   const [autoBlockEnabled, setAutoBlockEnabled] = useState(() => {
     const saved = localStorage.getItem('autoBlockEnabled');
     return saved ? JSON.parse(saved) : false;
   });
 
+  // Use ref to avoid stale closure in callbacks
+  const isAdminRef = useRef(isAdmin);
+  isAdminRef.current = isAdmin;
+
+  // Check admin role on mount
+  useEffect(() => {
+    let isMounted = true;
+
+    const checkAdmin = async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user || !isMounted) {
+          setIsAdmin(false);
+          setIsRoleLoading(false);
+          return;
+        }
+
+        const { data, error } = await supabase.rpc('is_admin', { _user_id: user.id });
+        if (!isMounted) return;
+
+        if (error) {
+          console.warn('Failed to check admin role:', error);
+          setIsAdmin(false);
+        } else {
+          setIsAdmin(Boolean(data));
+        }
+      } catch (err) {
+        console.error('Admin check error:', err);
+        if (isMounted) setIsAdmin(false);
+      } finally {
+        if (isMounted) setIsRoleLoading(false);
+      }
+    };
+
+    checkAdmin();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const toggleAutoBlock = useCallback(() => {
     setAutoBlockEnabled((prev: boolean) => {
       const newValue = !prev;
+
+      // SECURITY: Only admins can enable auto-block
+      if (newValue && !isAdminRef.current) {
+        toast.error('Auto-block requires admin role');
+        return prev;
+      }
+
       localStorage.setItem('autoBlockEnabled', JSON.stringify(newValue));
       toast.success(newValue ? 'Auto-block enabled' : 'Auto-block disabled');
       return newValue;
     });
   }, []);
+
+  // Disable auto-block if user loses admin status
+  useEffect(() => {
+    if (isRoleLoading) return;
+    if (isAdmin) return;
+    if (!autoBlockEnabled) return;
+
+    setAutoBlockEnabled(false);
+    localStorage.setItem('autoBlockEnabled', JSON.stringify(false));
+    toast.error('Auto-block disabled: admin role required');
+  }, [autoBlockEnabled, isAdmin, isRoleLoading]);
 
   const fetchStats = useCallback(async () => {
     try {
@@ -97,11 +172,14 @@ export function useSecurityStats() {
           typeCounts[type] = (typeCounts[type] || 0) + 1;
         });
         const total = Object.values(typeCounts).reduce((a, b) => a + b, 0);
-        const types = Object.entries(typeCounts).map(([name, count]) => ({
-          name,
-          count,
-          percentage: Math.round((count / total) * 100),
-        })).sort((a, b) => b.count - a.count).slice(0, 6);
+        const types = Object.entries(typeCounts)
+          .map(([name, count]) => ({
+            name,
+            count,
+            percentage: Math.round((count / total) * 100),
+          }))
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 6);
         setAttackTypes(types);
       }
 
@@ -119,7 +197,6 @@ export function useSecurityStats() {
         });
       }
       setThreatTrends(trends);
-
     } catch (error) {
       console.error('Error fetching stats:', error);
     } finally {
@@ -127,98 +204,146 @@ export function useSecurityStats() {
     }
   }, []);
 
-  const blockAttack = async (attackId: string, sourceIp: string, attackType: string, severity: string, reason: string) => {
-    try {
-      const { error } = await supabase.functions.invoke('block-entity', {
-        body: { type: 'ip', value: sourceIp, attack_id: attackId, attack_type: attackType, severity, reason }
-      });
-      if (error) throw error;
-      toast.success(`Blocked IP: ${sourceIp}`);
-      await fetchStats();
-      return true;
-    } catch (error: any) {
-      toast.error(`Failed to block: ${error.message}`);
-      return false;
-    }
-  };
+  const blockAttack = useCallback(
+    async (attackId: string, sourceIp: string, attackType: string, severity: string, reason: string) => {
+      if (!isAdminRef.current) {
+        toast.error('Admin role required to block entities');
+        return false;
+      }
 
-  const blockAllAttacks = async (attacks: Array<{ id: string; source_ip: string; attack_type: string; severity: string }>) => {
-    let blocked = 0;
-    let failed = 0;
-    
-    for (const attack of attacks) {
       try {
         const { error } = await supabase.functions.invoke('block-entity', {
-          body: { 
-            type: 'ip', 
-            value: attack.source_ip, 
-            attack_id: attack.id, 
-            attack_type: attack.attack_type, 
-            severity: attack.severity, 
-            reason: 'Bulk block from dashboard',
-            auto_blocked: false
-          }
+          body: { type: 'ip', value: sourceIp, attack_id: attackId, attack_type: attackType, severity, reason },
         });
+
+        if (error) {
+          toast.error(`Failed to block: ${getEdgeFunctionErrorMessage(error)}`);
+          return false;
+        }
+
+        toast.success(`Blocked IP: ${sourceIp}`);
+        await fetchStats();
+        return true;
+      } catch (error: any) {
+        toast.error(`Failed to block: ${getEdgeFunctionErrorMessage(error)}`);
+        return false;
+      }
+    },
+    [fetchStats]
+  );
+
+  const blockAllAttacks = useCallback(
+    async (attacks: Array<{ id: string; source_ip: string; attack_type: string; severity: string }>) => {
+      if (!isAdminRef.current) {
+        toast.error('Admin role required to block entities');
+        return { success: false, blocked: 0, failed: attacks.length };
+      }
+
+      let blocked = 0;
+      let failed = 0;
+
+      for (const attack of attacks) {
+        const { error } = await supabase.functions.invoke('block-entity', {
+          body: {
+            type: 'ip',
+            value: attack.source_ip,
+            attack_id: attack.id,
+            attack_type: attack.attack_type,
+            severity: attack.severity,
+            reason: 'Bulk block from dashboard',
+            auto_blocked: false,
+          },
+        });
+
         if (!error) {
           blocked++;
         } else {
           failed++;
         }
-      } catch {
-        failed++;
       }
-    }
-    
-    await fetchStats();
-    return { success: failed === 0, blocked, failed };
-  };
 
-  // Auto-block incoming critical/high severity attacks
+      await fetchStats();
+      return { success: failed === 0, blocked, failed };
+    },
+    [fetchStats]
+  );
+
+  // Auto-block incoming critical/high severity attacks (admin-only)
   useEffect(() => {
     if (!autoBlockEnabled) return;
-    
-    const channel = supabase.channel('auto-block-realtime')
-      .on('postgres_changes', { 
-        event: 'INSERT', 
-        schema: 'public', 
-        table: 'live_attacks',
-        filter: 'severity=in.(critical,high)'
-      }, async (payload) => {
-        const attack = payload.new as any;
-        if (attack.severity === 'critical' || attack.severity === 'high') {
-          console.log(`Auto-blocking ${attack.severity} attack from ${attack.source_ip}`);
-          try {
-            await supabase.functions.invoke('block-entity', {
-              body: { 
-                type: 'ip', 
-                value: attack.source_ip, 
-                attack_id: attack.id, 
-                attack_type: attack.attack_type, 
-                severity: attack.severity, 
-                reason: `Auto-blocked ${attack.severity} threat`,
-                auto_blocked: true
-              }
-            });
-            toast.info(`Auto-blocked ${attack.severity} attack from ${attack.source_ip}`);
-          } catch (error) {
-            console.error('Auto-block failed:', error);
-          }
-        }
-      })
-      .subscribe();
-      
-    return () => { supabase.removeChannel(channel); };
-  }, [autoBlockEnabled]);
+    if (!isAdmin) return;
 
+    const channel = supabase
+      .channel('auto-block-realtime')
+      .on(
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'live_attacks',
+          filter: 'severity=in.(critical,high)',
+        },
+        async (payload) => {
+          const attack = payload.new as any;
+          if (attack.severity !== 'critical' && attack.severity !== 'high') return;
+
+          console.log(`Auto-blocking ${attack.severity} attack from ${attack.source_ip}`);
+
+          const { error } = await supabase.functions.invoke('block-entity', {
+            body: {
+              type: 'ip',
+              value: attack.source_ip,
+              attack_id: attack.id,
+              attack_type: attack.attack_type,
+              severity: attack.severity,
+              reason: `Auto-blocked ${attack.severity} threat`,
+              auto_blocked: true,
+            },
+          });
+
+          if (error) {
+            console.warn('Auto-block failed:', error);
+            toast.error(`Auto-block failed: ${getEdgeFunctionErrorMessage(error)}`);
+            return;
+          }
+
+          toast.info(`Auto-blocked ${attack.severity} attack from ${attack.source_ip}`);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [autoBlockEnabled, isAdmin]);
+
+  // Fetch stats on mount and subscribe to realtime updates
   useEffect(() => {
     fetchStats();
-    const channel = supabase.channel('stats-realtime')
+
+    const channel = supabase
+      .channel('stats-realtime')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'live_attacks' }, fetchStats)
       .on('postgres_changes', { event: '*', schema: 'public', table: 'blocked_attacks' }, fetchStats)
       .on('postgres_changes', { event: '*', schema: 'public', table: 'incidents' }, fetchStats)
       .subscribe();
-    return () => { supabase.removeChannel(channel); };
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, [fetchStats]);
 
-  return { stats, threatTrends, attackTypes, isLoading, refresh: fetchStats, blockAttack, autoBlockEnabled, toggleAutoBlock, blockAllAttacks };
+  return {
+    stats,
+    threatTrends,
+    attackTypes,
+    isLoading,
+    isAdmin,
+    isRoleLoading,
+    refresh: fetchStats,
+    blockAttack,
+    autoBlockEnabled,
+    toggleAutoBlock,
+    blockAllAttacks,
+  };
 }

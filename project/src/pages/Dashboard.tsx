@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Shield, AlertTriangle, Activity, Target, Zap, RefreshCw, ShieldBan, ShieldCheck, Loader2 } from 'lucide-react';
+import { Shield, AlertTriangle, Activity, Target, Zap, RefreshCw, ShieldBan, ShieldCheck, Loader2, Lock } from 'lucide-react';
 import { StatCard } from '@/components/dashboard/StatCard';
 import { RiskGauge } from '@/components/dashboard/RiskGauge';
 import { ThreatFeed } from '@/components/dashboard/ThreatFeed';
@@ -20,7 +20,7 @@ export default function Dashboard() {
     limit: 20
   });
 
-  const { stats, isLoading: statsLoading, refresh: refreshStats, blockAttack, autoBlockEnabled, toggleAutoBlock, blockAllAttacks } = useSecurityStats();
+  const { stats, isLoading: statsLoading, refresh: refreshStats, blockAttack, autoBlockEnabled, toggleAutoBlock, blockAllAttacks, isAdmin, isRoleLoading } = useSecurityStats();
   const [recommendations, setRecommendations] = useState<any[]>([]);
   const [isBlockingAll, setIsBlockingAll] = useState(false);
 
@@ -95,10 +95,21 @@ export default function Dashboard() {
   };
 
   const handleBlockAllAttacks = async () => {
+    if (isRoleLoading) {
+      toast.info('Checking permissions…');
+      return;
+    }
+
+    if (!isAdmin) {
+      toast.error('Admin role required to block entities');
+      return;
+    }
+
     if (attacks.length === 0) {
       toast.info('No active attacks to block');
       return;
     }
+
     setIsBlockingAll(true);
     try {
       const result = await blockAllAttacks(attacks);
@@ -143,6 +154,14 @@ export default function Dashboard() {
           </p>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
+          {/* Admin Only Indicator */}
+          {!isRoleLoading && !isAdmin && (
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-warning/10 border border-warning/30 text-warning">
+              <Lock className="h-3.5 w-3.5" />
+              <span className="text-xs font-medium">Admin Only</span>
+            </div>
+          )}
+
           {/* Auto Block Toggle */}
           <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/30 border border-border">
             <ShieldCheck className={`h-4 w-4 ${autoBlockEnabled ? 'text-success' : 'text-muted-foreground'}`} />
@@ -150,6 +169,7 @@ export default function Dashboard() {
             <Switch
               checked={autoBlockEnabled}
               onCheckedChange={toggleAutoBlock}
+              disabled={isRoleLoading || !isAdmin}
             />
           </div>
           
@@ -157,8 +177,9 @@ export default function Dashboard() {
           <Button 
             variant="destructive" 
             onClick={handleBlockAllAttacks} 
-            disabled={isBlockingAll || attacks.length === 0}
+            disabled={isBlockingAll || attacks.length === 0 || isRoleLoading || !isAdmin}
             className="gap-2"
+            title={!isAdmin ? 'Admin role required' : undefined}
           >
             {isBlockingAll ? (
               <Loader2 className="h-4 w-4 animate-spin" />
@@ -231,7 +252,7 @@ export default function Dashboard() {
 
       {/* Live Feed with Block functionality */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <ThreatFeed attacks={attacks} isLoading={attacksLoading} onBlockAttack={blockAttack} />
+        <ThreatFeed attacks={attacks} isLoading={attacksLoading} onBlockAttack={isAdmin ? blockAttack : undefined} showAdminOnlyHint={!isRoleLoading && !isAdmin} />
         
         {/* Quick Actions */}
         <div className="cyber-card rounded-xl border border-border p-6">

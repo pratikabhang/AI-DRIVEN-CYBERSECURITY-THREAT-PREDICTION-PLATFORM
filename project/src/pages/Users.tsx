@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Link } from 'react-router-dom';
 import { 
   Search, Shield, Users as UsersIcon, Crown, Eye, 
   UserCog, AlertTriangle, CheckCircle 
@@ -102,6 +103,9 @@ export default function Users() {
   };
 
   const updateUserRole = async (userId: string, newRole: AppRole) => {
+    // NOTE: This client-side check is for UI/UX purposes only.
+    // The actual authorization is enforced by RLS policies on user_roles table
+    // which require admin role to UPDATE/INSERT/DELETE.
     if (currentUserRole !== 'admin') {
       toast({ 
         title: 'Access Denied', 
@@ -169,12 +173,20 @@ export default function Users() {
           <h1 className="text-3xl font-bold">User Management</h1>
           <p className="text-muted-foreground">Manage team members and their roles</p>
         </div>
-        {!isAdmin && (
-          <div className="flex items-center gap-2 text-warning bg-warning/10 px-4 py-2 rounded-lg border border-warning/30">
-            <AlertTriangle className="h-4 w-4" />
-            <span className="text-sm">Admin access required to modify roles</span>
-          </div>
-        )}
+        <div className="flex items-center gap-3">
+          <Button variant="outline" asChild>
+            <Link to="/users/roles" className="gap-2">
+              <Shield className="h-4 w-4" />
+              Role Management
+            </Link>
+          </Button>
+          {!isAdmin && (
+            <div className="flex items-center gap-2 text-warning bg-warning/10 px-4 py-2 rounded-lg border border-warning/30">
+              <AlertTriangle className="h-4 w-4" />
+              <span className="text-sm">Admin access required to modify roles</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Stats */}

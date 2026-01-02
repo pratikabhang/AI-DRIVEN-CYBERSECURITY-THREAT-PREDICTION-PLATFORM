@@ -118,6 +118,51 @@ export type Database = {
         }
         Relationships: []
       }
+      export_history: {
+        Row: {
+          collection: string
+          config_summary: Json | null
+          data_snapshot: Json | null
+          error_message: string | null
+          exported_at: string
+          external_id: string | null
+          external_url: string | null
+          id: string
+          platform: string
+          status: string
+          synced_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          collection: string
+          config_summary?: Json | null
+          data_snapshot?: Json | null
+          error_message?: string | null
+          exported_at?: string
+          external_id?: string | null
+          external_url?: string | null
+          id?: string
+          platform: string
+          status?: string
+          synced_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          collection?: string
+          config_summary?: Json | null
+          data_snapshot?: Json | null
+          error_message?: string | null
+          exported_at?: string
+          external_id?: string | null
+          external_url?: string | null
+          id?: string
+          platform?: string
+          status?: string
+          synced_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       incidents: {
         Row: {
           assigned_to: string | null
@@ -396,7 +441,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: { Args: { _user_id: string }; Returns: boolean }
     }
     Enums: {
       app_role: "admin" | "analyst" | "viewer"

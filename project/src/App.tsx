@@ -15,6 +15,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Settings = lazy(() => import("./pages/Settings"));
 const Incidents = lazy(() => import("./pages/Incidents"));
 const Users = lazy(() => import("./pages/Users"));
+const Roles = lazy(() => import("./pages/users/Roles"));
 const StaticScanner = lazy(() => import("./pages/scanner/StaticScanner"));
 const WebsiteScanner = lazy(() => import("./pages/scanner/WebsiteScanner"));
 const APIScanner = lazy(() => import("./pages/scanner/APIScanner"));
@@ -25,6 +26,7 @@ const Analytics = lazy(() => import("./pages/monitor/Analytics"));
 const ThreatFeed = lazy(() => import("./pages/monitor/ThreatFeed"));
 const BlockedAttacks = lazy(() => import("./pages/monitor/BlockedAttacks"));
 const Predictions = lazy(() => import("./pages/ai/Predictions"));
+const ExportHistory = lazy(() => import("./pages/ExportHistory"));
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -63,6 +65,8 @@ const App = () => (
               <Route path="/incidents" element={<Incidents />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/users" element={<Users />} />
+              <Route path="/users/roles" element={<Roles />} />
+              <Route path="/exports" element={<ExportHistory />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
