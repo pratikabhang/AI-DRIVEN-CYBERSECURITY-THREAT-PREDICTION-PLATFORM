@@ -6,11 +6,6 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
 ![Status](https://img.shields.io/badge/Project-Active-success.svg)
 
-## 📌 Short Description
-
-An **AI-powered autonomous cybersecurity system** that monitors network activity in real time, predicts cyber threats, and responds intelligently with minimal human intervention.
-
----
 
 ## 📝 Problem Statement
 
