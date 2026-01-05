@@ -189,14 +189,3 @@ This project is licensed under the MIT License.
 
 The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent, automated, and scalable cybersecurity solution. By combining real-time monitoring, AI-driven prediction, and autonomous response mechanisms, the system significantly enhances security while minimizing operational overhead.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue or contact the maintainers.
