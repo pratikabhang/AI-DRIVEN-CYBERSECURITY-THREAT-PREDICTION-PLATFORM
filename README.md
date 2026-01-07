@@ -6,6 +6,12 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
 ![Status](https://img.shields.io/badge/Project-Active-success.svg)
 
+## 🎬 Video Demo
+
+<video src="https://www.jioaicloud.com/l/?u=mMG6NgP-wzrVZ3j5NMKKGo2umyDEcvHWs1LP3IS4-TAlodmX2I4Z30S5LFpI3WhfXPz" controls width="700"></video>
+
+
+---
 
 ## 📝 Problem Statement
 
