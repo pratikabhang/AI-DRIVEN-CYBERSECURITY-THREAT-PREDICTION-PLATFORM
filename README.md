@@ -6,12 +6,6 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
 ![Status](https://img.shields.io/badge/Project-Active-success.svg)
 
-## 🎬 Video Demo
-
-<video src="https://www.jioaicloud.com/l/?u=mMG6NgP-wzrVZ3j5NMKKGo2umyDEcvHWs1LP3IS4-TAlodmX2I4Z30S5LFpI3WhfXPz" controls width="700"></video>
-
-
----
 
 ## 📝 Problem Statement
 
@@ -108,6 +102,7 @@ The system follows a **modular and scalable architecture**:
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - React  
 - TypeScript  
 - Vite  
@@ -117,9 +112,11 @@ The system follows a **modular and scalable architecture**:
 - Recharts (analytics & reports)  
 
 ### Backend & Database
+
 - Supabase (Authentication, Database, Edge Functions)  
 
 ### State Management & Validation
+
 - TanStack Query  
 - React Hook Form  
 - Zod  
@@ -139,11 +136,13 @@ The system follows a **modular and scalable architecture**:
 ### 📦 Installation
 
 Install dependencies:
+
 ```bash
 npm install
 ```
 
 or
+
 ```bash
 bun install
 ```
@@ -153,6 +152,7 @@ bun install
 ### 🔐 Environment Configuration
 
 Create a `.env` file in the root directory:
+
 ```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -163,11 +163,13 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ### ▶️ Running the Application
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
 
 Open in your browser:
+
 ```
 http://localhost:8080
 ```
@@ -194,4 +196,3 @@ This project is licensed under the MIT License.
 ## 📌 Conclusion
 
 The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent, automated, and scalable cybersecurity solution. By combining real-time monitoring, AI-driven prediction, and autonomous response mechanisms, the system significantly enhances security while minimizing operational overhead.
-
