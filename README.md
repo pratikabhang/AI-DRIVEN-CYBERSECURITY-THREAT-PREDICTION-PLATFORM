@@ -192,4 +192,3 @@ The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent,
 
 - **Live Demo:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
 - **Source Code:** [GitHub Repository](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
-- **Documentation:** See links above for detailed project resources
