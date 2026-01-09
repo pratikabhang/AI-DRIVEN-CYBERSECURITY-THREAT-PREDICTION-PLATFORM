@@ -1,4 +1,4 @@
-# 🔐 AI-Based Cyber Security Threats Prediction AI Agent
+# 🔐 AI-Driven Cybersecurity Threat Prediction Platform
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 ![React](https://img.shields.io/badge/Frontend-React-blue.svg)
@@ -6,14 +6,36 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
 ![Status](https://img.shields.io/badge/Project-Active-success.svg)
 
+## 🌐 Live Deployment
+
+**Access the live application here:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
+
+## 📁 Project Resources
+
+### 📊 Code & Documentation
+
+- **SQL Tasks Implementation:** [`sql_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/sql_task.ipynb)
+- **Python AI Implementation:** [`python_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/python_task.ipynb)
+- **Model Research Paper:** [`model_research.pdf`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/model_research.pdf)
+
+### 📑 Project Management
+
+- **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
+- **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
+
+### 🎥 Multimedia Resources
+
+- **Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
+
+### 🏗️ Architecture
+
+- **System Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_3.png)
 
 ## 📝 Problem Statement
 
 Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient.
 
 This project proposes an **agentic AI-based cybersecurity system** that acts as an autonomous guardian. The AI agents continuously monitor network traffic, detect anomalies, predict threats, and generate real-time security insights without constant human supervision.
-
----
 
 ## 🎯 Project Objectives
 
@@ -22,8 +44,6 @@ This project proposes an **agentic AI-based cybersecurity system** that acts as 
 - Reduce dependency on human security analysts for routine tasks  
 - Improve organizational resilience through proactive AI-based defense  
 
----
-
 ## 🗝️ Key Outcomes
 
 - 🔍 Autonomous and continuous monitoring of network traffic  
@@ -31,9 +51,7 @@ This project proposes an **agentic AI-based cybersecurity system** that acts as 
 - 🤖 Reduced human workload using intelligent automation  
 - 🛡️ Stronger and proactive protection against cyber-attacks  
 
----
-
-## 🧩 Modules to be Implemented
+## 🧩 Modules Implemented
 
 ### 1️⃣ Data Collection and Analysis
 
@@ -46,15 +64,11 @@ This project proposes an **agentic AI-based cybersecurity system** that acts as 
 - Perform preprocessing, normalization, and filtering  
 - Identify suspicious behavior and anomalies  
 
----
-
 ### 2️⃣ AI Model Development and Training
 
 - Design AI/ML models for anomaly detection and threat prediction  
 - Train models using historical and real-time datasets  
 - Improve accuracy through adaptive learning  
-
----
 
 ### 3️⃣ Real-time Threat Detection
 
@@ -62,15 +76,11 @@ This project proposes an **agentic AI-based cybersecurity system** that acts as 
 - Detect abnormal patterns instantly  
 - Generate alerts, risk scores, and actionable security insights  
 
----
-
 ### 4️⃣ Integration and Deployment
 
 - Integrate AI services with frontend dashboards  
 - Secure backend APIs and database connections  
 - Deploy with scalability, reliability, and performance optimization  
-
----
 
 ## 🧠 System Architecture Overview
 
@@ -97,8 +107,6 @@ The system follows a **modular and scalable architecture**:
   - Risk scoring  
   - Autonomous response logic  
 
----
-
 ## 🛠️ Technology Stack
 
 ### Frontend
@@ -121,8 +129,6 @@ The system follows a **modular and scalable architecture**:
 - React Hook Form  
 - Zod  
 
----
-
 ## 🏁 Getting Started
 
 ### ✅ Prerequisites
@@ -130,8 +136,6 @@ The system follows a **modular and scalable architecture**:
 - Node.js (v18 or higher)  
 - npm or bun package manager  
 - Supabase account  
-
----
 
 ### 📦 Installation
 
@@ -147,8 +151,6 @@ or
 bun install
 ```
 
----
-
 ### 🔐 Environment Configuration
 
 Create a `.env` file in the root directory:
@@ -157,8 +159,6 @@ Create a `.env` file in the root directory:
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
-
----
 
 ### ▶️ Running the Application
 
@@ -174,8 +174,6 @@ Open in your browser:
 http://localhost:8080
 ```
 
----
-
 ## 🧪 Core Features
 
 - ✅ Secure authentication with role-based access control
@@ -185,14 +183,18 @@ http://localhost:8080
 - 🔍 Website, API, QR-code, and static file security scanners
 - ⚡ Real-time alerts and incident management
 
----
-
 ## 📄 License
 
 This project is licensed under the MIT License.
 
----
-
 ## 📌 Conclusion
 
 The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent, automated, and scalable cybersecurity solution. By combining real-time monitoring, AI-driven prediction, and autonomous response mechanisms, the system significantly enhances security while minimizing operational overhead.
+
+---
+
+**Quick Links:**
+
+- **Live Demo:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
+- **Source Code:** [GitHub Repository](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
+- **Documentation:** See links above for detailed project resources
