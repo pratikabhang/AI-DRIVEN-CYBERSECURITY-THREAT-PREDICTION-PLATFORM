@@ -75,7 +75,7 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 
 ## 🏗️ System Architecture
 
-![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_3.png)
+![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
 
 The system follows a modular three-tier architecture:
 
