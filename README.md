@@ -13,15 +13,6 @@
 
 **Important Notice**: This is an **enterprise cybersecurity platform**. The login/signin functionality is exclusively available to registered organizations and companies with active subscriptions. Public user registration is not available.
 
-## 🎥 Project Demo Video
-
-<div align="center">
-  <video width="800" controls muted>
-    <source src="https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <p><em>Demo showing real-time threat detection, AI prediction, and dashboard features</em></p>
-</div>
 
 ## 📁 Project Resources
 
