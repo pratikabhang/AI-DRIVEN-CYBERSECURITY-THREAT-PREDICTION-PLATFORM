@@ -167,7 +167,7 @@ Visit: `http://localhost:8080`
 
 **Note**: Login functionality only works with valid organization credentials.
 
-## 👥 Team Members (Alphabetical Order)
+## 👥 Team Members
 
 - Ashutosh
 - Avinash
