@@ -10,6 +10,8 @@
 
 **Access the live application here:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
 
+**Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
+
 ## 📝 Problem Statement
 
 Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient.
@@ -17,8 +19,6 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 This project proposes an **agentic AI-based cybersecurity system** that acts as an autonomous guardian. The AI agents continuously monitor network traffic, detect anomalies, predict threats, and generate real-time security insights without constant human supervision.
 
 ## 📑 Project Architecture
-
-- **Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
 
 - **System Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
 
