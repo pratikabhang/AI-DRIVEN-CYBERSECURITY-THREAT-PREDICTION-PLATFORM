@@ -18,11 +18,9 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 
 This project proposes an **agentic AI-based cybersecurity system** that acts as an autonomous guardian. The AI agents continuously monitor network traffic, detect anomalies, predict threats, and generate real-time security insights without constant human supervision.
 
-## 📑 Project Architecture
+## 🗃️ Architecture
 
 - **System Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
-
-- **AI Agent Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_2.png)
 
 
 ## 🎯 Project Objectives
