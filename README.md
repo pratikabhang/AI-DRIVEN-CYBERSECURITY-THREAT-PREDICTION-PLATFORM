@@ -8,7 +8,7 @@
 
 ## 🌐 Live Deployment
 
-**Access the live application here:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
+**Access the live application here:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
 
 **Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
 
@@ -20,7 +20,7 @@ This project proposes an **agentic AI-based cybersecurity system** that acts as 
 
 ## 🗃️ Architecture
 
-- **System Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
+![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
 
 
 ## 🎯 Project Objectives
