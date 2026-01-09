@@ -72,11 +72,10 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 - **Admin Approval**: New users must be approved by organization administrators
 - **Domain Verification**: Organization email domain verification for security
 
-## 🔗 Source Code
-
-**GitHub Repository:** [AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
 
 ## 🏗️ System Architecture
+
+![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_3.png)
 
 The system follows a modular three-tier architecture:
 
