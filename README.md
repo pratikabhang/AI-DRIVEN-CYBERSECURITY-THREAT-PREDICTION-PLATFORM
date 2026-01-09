@@ -33,10 +33,8 @@
 
 ### 🏗️ Architecture
 
-- **System Architecture Diagram:**
+**System Architecture Diagram:**
   ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/architecture_1.png)
-
-## 🏗️ System Architecture
 
 **Multi-tier modular architecture** with AI intelligence layer for real-time threat detection and prediction.
 
