@@ -1,185 +1,290 @@
 # 🔐 AI-Driven Cybersecurity Threat Prediction Platform
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-![React](https://img.shields.io/badge/Frontend-React-blue.svg)
-![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
+![MERN Stack](https://img.shields.io/badge/Stack-MERN-success.svg)
 ![Status](https://img.shields.io/badge/Project-Active-success.svg)
+![Version](https://img.shields.io/badge/Version-1.0.0-informational.svg)
+![Enterprise](https://img.shields.io/badge/Access-Enterprise_Only-blue.svg)
 
 ## 🌐 Live Deployment
 
-**Access the live application here:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
+**Access the platform landing page:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
 
-**Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
+**Important Notice**: This is an **enterprise cybersecurity platform**. The login/signin functionality is exclusively available to registered organizations and companies with active subscriptions. Public user registration is not available.
 
 ## 📝 Problem Statement
 
-Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient.
+Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient. Organizations face challenges with delayed threat detection, overwhelming alert volumes, and limited resources for continuous security monitoring.
 
-This project proposes an **agentic AI-based cybersecurity system** that acts as an autonomous guardian. The AI agents continuously monitor network traffic, detect anomalies, predict threats, and generate real-time security insights without constant human supervision.
+## 🎯 Objectives
 
-## 🗃️ Architecture
+- Develop AI-driven models for real-time cyber threat detection and prediction
+- Implement autonomous agents for continuous network monitoring
+- Reduce dependency on human security analysts for routine tasks
+- Improve organizational resilience through proactive AI-based defense
+- Create an intuitive platform for comprehensive security management
 
-![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_1.png)
+## 📈 Future Scope
 
+- Integration with more threat intelligence feeds and SIEM systems
+- Advanced ML models for zero-day attack prediction
+- Mobile application for on-the-go security monitoring
+- Automated incident response and remediation workflows
+- Blockchain-based security log immutability
+- IoT and industrial control system security modules
+- Compliance automation for regulations (GDPR, HIPAA, PCI-DSS)
 
-## 🎯 Project Objectives
+## ✨ Key Features
 
-- Develop AI-driven models for real-time cyber threat detection and prediction  
-- Implement autonomous agents for continuous network monitoring  
-- Reduce dependency on human security analysts for routine tasks  
-- Improve organizational resilience through proactive AI-based defense  
+- AI-powered threat prediction and anomaly detection
+- Real-time global threat monitoring with 3D visualization
+- Comprehensive security scanning suite (Web, API, QR, Static)
+- Automated incident management and correlation
+- Role-based access control with enterprise security
+- Real-time alerting and threat intelligence feed
+- Historical data export and compliance reporting
 
-## 🗝️ Key Outcomes
+## 📋 Requirements
 
-- 🔍 Autonomous and continuous monitoring of network traffic  
-- ⚠️ Real-time threat detection with alerts and risk scores  
-- 🤖 Reduced human workload using intelligent automation  
-- 🛡️ Stronger and proactive protection against cyber-attacks  
+### Technical Requirements
 
-## 🧩 Modules Implemented
+- Node.js v18+ runtime environment
+- Supabase account for backend services
+- Modern web browser with JavaScript enabled
+- Minimum 4GB RAM for optimal performance
+- Stable internet connection for real-time updates
 
-### 1️⃣ Data Collection and Analysis
+### Functional Requirements
 
-- Collect security-related data from:
-  - Network traffic  
-  - System logs  
-  - APIs  
-  - Files  
-  - User activities  
-- Perform preprocessing, normalization, and filtering  
-- Identify suspicious behavior and anomalies  
+- User authentication and authorization
+- Real-time threat monitoring and alerts
+- Multiple security scanning capabilities
+- Data visualization and reporting
+- Export functionality for reports
+- AI-based threat prediction
+- Incident management system
 
-### 2️⃣ AI Model Development and Training
+### Access Requirements
 
-- Design AI/ML models for anomaly detection and threat prediction  
-- Train models using historical and real-time datasets  
-- Improve accuracy through adaptive learning  
+- **Enterprise Subscription**: Platform access requires an active enterprise subscription
+- **Organization Account**: Login credentials are provided to registered organizations only
+- **Admin Approval**: New users must be approved by organization administrators
+- **Domain Verification**: Organization email domain verification for security
 
-### 3️⃣ Real-time Threat Detection
+## 🔗 Source Code
 
-- Continuously monitor live network and system activity  
-- Detect abnormal patterns instantly  
-- Generate alerts, risk scores, and actionable security insights  
+**GitHub Repository:** [AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
 
-### 4️⃣ Integration and Deployment
+## 🏗️ System Architecture
 
-- Integrate AI services with frontend dashboards  
-- Secure backend APIs and database connections  
-- Deploy with scalability, reliability, and performance optimization  
+The system follows a modular three-tier architecture:
 
-## 🧠 System Architecture Overview
+### Frontend Layer (Presentation Tier)
 
-The system follows a **modular and scalable architecture**:
+- **React + TypeScript** application with Vite build tool
+- **Tailwind CSS** for responsive UI components
+- **Three.js** for 3D visualizations and globe rendering
+- **shadcn/ui** for accessible component library
 
-- **Data Sources**  
-  Users, Wi-Fi traffic, VPN traffic, system logs, global threat feeds  
+### Backend Layer (Application Tier)
 
-- **Frontend (React + TypeScript)**  
-  Dashboards for:
-  - Live monitoring  
-  - Threat analysis  
-  - Alerts & reports  
-  - AI interaction  
+- **Supabase** for authentication and database services
+- **Edge Functions** for serverless API endpoints
+- **Real-time subscriptions** for live data updates
+- **PostgreSQL** database for structured data storage
 
-- **Backend Services (Supabase)**  
-  - Authentication & authorization  
-  - Database storage  
-  - Edge functions for real-time processing  
+### AI Layer (Intelligence Tier)
 
-- **AI Intelligence Layer**  
-  - Anomaly detection  
-  - Threat prediction  
-  - Risk scoring  
-  - Autonomous response logic  
+- **Machine Learning models** for anomaly detection
+- **Predictive analytics** for threat forecasting
+- **Natural Language Processing** for log analysis
+- **Pattern recognition** for attack correlation
 
-## 🛠️ Technology Stack
+### Access Control Layer
 
-### Frontend
+- **Organization-based authentication**
+- **Role-based permissions** (Admin, Analyst, Viewer)
+- **Domain whitelisting** for enterprise access
+- **Multi-factor authentication** support
 
-- React  
-- TypeScript  
-- Vite  
-- Tailwind CSS  
-- shadcn/ui  
-- Three.js (3D threat & globe visualization)  
-- Recharts (analytics & reports)  
+## 🏠 Landing Page Features
 
-### Backend & Database
+The public-facing landing page provides information about the platform while restricting access to authorized organizations only:
 
-- Supabase (Authentication, Database, Edge Functions)  
+### Public Information Available
 
-### State Management & Validation
+- Platform overview and capabilities
+- Feature demonstrations and screenshots
+- Case studies and testimonials
+- Pricing and subscription information
+- Contact form for enterprise inquiries
+- Company information and security compliance details
 
-- TanStack Query  
-- React Hook Form  
-- Zod  
+### Restricted Areas (Organization Access Required)
 
-## 🏁 Getting Started
+- Dashboard and monitoring tools
+- Security scanning functionalities
+- Incident management system
+- User administration panel
+- Real-time threat intelligence
+- Report generation and exports
 
-### ✅ Prerequisites
+## 🛡️ ThreatPredict Platform Overview
 
-- Node.js (v18 or higher)  
-- npm or bun package manager  
-- Supabase account  
+An **agentic AI-based cybersecurity system** that acts as an autonomous guardian, continuously monitoring network traffic, detecting anomalies, predicting threats, and generating real-time security insights. **Exclusively designed for enterprise organizations** with dedicated security teams.
 
-### 📦 Installation
+## 📊 ThreatPredict Platform Modules
 
-Install dependencies:
+### **Dashboard**
+
+- **Definition**: Central command center providing real-time security posture overview with key metrics and alerts.
+- **Example**: SOC analyst sees "Active Threats: 12", "Risk Score: Medium", and attack attempt graphs from last 24 hours.
+
+### **Scanners**
+
+#### Website Scanner
+
+- **Definition**: Audits websites for vulnerabilities like SQL Injection, XSS, and insecure configurations.
+- **Example**: Detects SQL injection vulnerability on `/product?id=1` and recommends parameterized queries.
+
+#### API Scanner
+
+- **Definition**: Analyzes API endpoints for security misconfigurations and OWASP API Top 10 risks.
+- **Example**: Flags `GET /api/v1/users` endpoint exposing full user details without proper access control.
+
+#### QR Scanner
+
+- **Definition**: Safely analyzes QR codes for malicious links before user scanning.
+- **Example**: Identifies QR code pointing to `http://shady-lnk.biz/claim` as credential phishing domain.
+
+#### Static Analysis
+
+- **Definition**: Examines source code/files without execution to find security flaws and hard-coded secrets.
+- **Example**: Detects plain text AWS access key `AKIA...` in Dockerfile line 15.
+
+### **Monitoring**
+
+#### Live Map
+
+- **Definition**: 2D geospatial map showing real-time security events and attack sources globally.
+- **Example**: Shows coordinated brute-force attacks from specific country targeting login servers.
+
+#### 3D Globe
+
+- **Definition**: Immersive 3D visualization of global cyber threat trends and botnet activity.
+- **Example**: Displays dense clusters of DDoS attack arcs between countries highlighting threat hotspots.
+
+#### Analytics
+
+- **Definition**: In-depth charts and reports on historical threat data for trend analysis.
+- **Example**: Shows 300% month-over-month increase in ransomware IOC hits prompting security review.
+
+#### Threat Feed
+
+- **Definition**: Live stream of security alerts, IOCs, and AI-generated threat intelligence.
+- **Example**: Alerts about critical CVE-2024-12345 in Apache Web Server affecting 3 company assets.
+
+#### Blocked Attacks
+
+- **Definition**: Log showing successfully prevented attacks by platform security systems.
+- **Example**: Lists 100 recently blocked attacks including 78 SQL injection and 22 XSS attempts.
+
+### **AI**
+
+#### Predictions
+
+- **Definition**: ML forecasts of potential future attacks based on historical and current data patterns.
+- **Example**: Predicts 87% probability of phishing targeting finance department in next 72 hours.
+
+#### Incidents
+
+- **Definition**: Managed workflow for tracking, investigating, and resolving confirmed security incidents.
+- **Example**: Correlates file detection, unusual traffic, and suspicious login into single incident case.
+
+#### Export History
+
+- **Definition**: Export scan reports, logs, and analytics in PDF/CSV/JSON formats for compliance.
+- **Example**: Exports quarterly user access logs and vulnerability scans as PDF for auditor review.
+
+#### Users
+
+- **Definition**: Administration panel for role-based access control and user management.
+- **Example**: Admin assigns "Analyst" role permitting alert viewing and scans but not system changes.
+
+#### Settings
+
+- **Definition**: Central configuration hub for system preferences, integrations, and notifications.
+- **Example**: Configures email and Slack alerts for "Critical" severity threats to #security-alerts channel.
+
+## 🏁 Quick Start
+
+### Prerequisites
+
+- Node.js v18 or higher
+- npm or bun package manager
+- Supabase account
+- **Enterprise subscription** (required for platform access)
+
+### Installation
 
 ```bash
 npm install
 ```
 
-or
+### Environment Setup
 
-```bash
-bun install
-```
-
-### 🔐 Environment Configuration
-
-Create a `.env` file in the root directory:
+Create `.env` file in root directory:
 
 ```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_ENTERPRISE_MODE=true
 ```
 
-### ▶️ Running the Application
-
-Start the development server:
+### Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Open in your browser:
+Visit: `http://localhost:8080`
 
-```
-http://localhost:8080
-```
+**Note**: Login functionality will only work with valid organization credentials.
 
-## 🧪 Core Features
+## 🔐 Access Protocol
 
-- ✅ Secure authentication with role-based access control
-- 📊 Live threat monitoring dashboard
-- 🌍 Global threat visualization using 3D maps
-- 🤖 AI-powered threat prediction and analysis
-- 🔍 Website, API, QR-code, and static file security scanners
-- ⚡ Real-time alerts and incident management
+1. **Organization Registration**: Companies must register through enterprise sales
+2. **Domain Verification**: Organization email domains are verified
+3. **Admin Setup**: Primary admin account is created by platform administrators
+4. **User Invitation**: Admins invite team members using organization email addresses
+5. **Role Assignment**: Appropriate security roles assigned based on responsibilities
+
+## 🛠️ Technology Stack
+
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS, Three.js, Recharts
+- **Backend**: Supabase (Authentication, Database, Edge Functions)
+- **State Management**: TanStack Query, React Hook Form, Zod
+- **Security**: JWT, RBAC, Domain-based authentication
+
+## 👥 Team Members (Alphabetical Order)
+
+- Ashutosh
+- Avinash
+- Gideon
+- Imran
+- Manisha
+- Pratik
+- Rajeswari
+- Sneha
+- Varnik
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-## 📌 Conclusion
-
-The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent, automated, and scalable cybersecurity solution. By combining real-time monitoring, AI-driven prediction, and autonomous response mechanisms, the system significantly enhances security while minimizing operational overhead.
+MIT License
 
 ---
 
-**Quick Links:**
+**Source Code**: [GitHub Repository](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
 
-- **Live Demo:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
-- **Source Code:** [GitHub Repository](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
+**Enterprise Inquiries**: Contact through landing page form at [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
