@@ -7,10 +7,7 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
 ![MERN Stack](https://img.shields.io/badge/Stack-MERN-success.svg)
 ![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)
-![Database](https://img.shields.io/badge/Database-PostgreSQL-blue.svg)
 ![API](https://img.shields.io/badge/API-REST-orange.svg)
-![Deployment](https://img.shields.io/badge/Deployment-Cloud-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-informational.svg)
 
 
 
