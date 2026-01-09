@@ -10,6 +10,16 @@
 
 **Access the live application here:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
 
+## 🎥 Project Demo Video
+
+<div align="center">
+  <video width="800" controls muted>
+    <source src="https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p><em>Demo showing real-time threat detection, AI prediction, and dashboard features</em></p>
+</div>
+
 ## 📁 Project Resources
 
 ### 📊 Code & Documentation
@@ -25,11 +35,12 @@
 
 ### 🎥 Multimedia Resources
 
-- **Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4)
+- **Demo Video:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/demo_video.mp4) *(Video displayed above)*
 
 ### 🏗️ Architecture
 
-- **System Architecture Diagram:** ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/architecture_3.png)
+- **System Architecture Diagram:**
+  ![Architecture](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/architecture_3.png)
 
 ## 📝 Problem Statement
 
@@ -198,3 +209,4 @@ The AI-Based Cyber Security Threats Prediction AI Agent provides an intelligent,
 - **Live Demo:** [https://ai-threatpredict.vercel.app/](https://ai-threatpredict.vercel.app/)
 - **Source Code:** [GitHub Repository](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
 - **Documentation:** See links above for detailed project resources
+- **Demo Video:** Click play on the video above to see the platform in action
