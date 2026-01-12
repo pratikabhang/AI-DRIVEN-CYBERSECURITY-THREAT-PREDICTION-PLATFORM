@@ -31,7 +31,7 @@
 
 **Test Credentials:**
 
-- **Email:** <Avinash@tp.com>
+- **Email:** <avinash@tp.com>
 - **Password:** 12345678
 
 ---
@@ -128,13 +128,13 @@ Organizations need intelligent, automated systems that can predict, detect, and 
 
 ### 🛡️ Real-Time Threat Monitoring
 
-| Feature | Description | Technology |
-|---------|-------------|------------|
-| **Live Attack Map** | Interactive 2D visualization of global cyber attacks | React + D3.js |
-| **3D Threat Globe** | Immersive 3D representation of attack patterns | Three.js + WebGL |
-| **Real-time Threat Feed** | Streaming security alerts with severity classification | WebSockets |
-| **Analytics Dashboard** | Comprehensive metrics and trend analysis | Recharts |
-| **Blocked Attacks Log** | Historical view of prevented threats | PostgreSQL |
+| Feature | Description |
+|---------|-------------|
+| **Live Attack Map** | Interactive 2D visualization of global cyber attacks |
+| **3D Threat Globe** | Immersive 3D representation of attack patterns | 
+| **Real-time Threat Feed** | Streaming security alerts with severity classification |
+| **Analytics Dashboard** | Comprehensive metrics and trend analysis |
+| **Blocked Attacks Log** | Historical view of prevented threats |
 
 ### 🔍 Multi-Modal Security Scanners
 
