@@ -374,90 +374,6 @@ threat-predict/
 ├── docs/                    # Documentation
 └── configurations/          # Config files
 ```
-
----
-
-## 🗄️ Database Schema
-
-### Core Security Tables
-
-```sql
--- Live attack monitoring
-CREATE TABLE live_attacks (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    source_ip INET NOT NULL,
-    target_ip INET NOT NULL,
-    attack_type VARCHAR(50) NOT NULL,
-    severity VARCHAR(20) CHECK (severity IN ('low', 'medium', 'high', 'critical')),
-    timestamp TIMESTAMPTZ DEFAULT NOW(),
-    location GEOGRAPHY(POINT),
-    details JSONB
-);
-
--- Blocked entities
-CREATE TABLE blocked_entities (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    entity_type VARCHAR(20) CHECK (entity_type IN ('ip', 'domain', 'user')),
-    entity_value VARCHAR(255) NOT NULL,
-    reason TEXT,
-    blocked_by UUID REFERENCES profiles(id),
-    blocked_at TIMESTAMPTZ DEFAULT NOW(),
-    expires_at TIMESTAMPTZ
-);
-
--- Security incidents
-CREATE TABLE incidents (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    status VARCHAR(20) DEFAULT 'open',
-    severity VARCHAR(20),
-    assigned_to UUID REFERENCES profiles(id),
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    resolved_at TIMESTAMPTZ
-);
-```
-
-### User Management Tables
-
-```sql
--- User profiles
-CREATE TABLE profiles (
-    id UUID PRIMARY KEY REFERENCES auth.users(id),
-    email VARCHAR(255) UNIQUE NOT NULL,
-    full_name VARCHAR(255),
-    role VARCHAR(20) DEFAULT 'viewer',
-    organization_id UUID,
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Audit logs
-CREATE TABLE audit_logs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES profiles(id),
-    action VARCHAR(100) NOT NULL,
-    resource_type VARCHAR(50),
-    resource_id UUID,
-    ip_address INET,
-    user_agent TEXT,
-    timestamp TIMESTAMPTZ DEFAULT NOW()
-);
-```
-
-### Additional Tables
-
-| Table | Description |
-|-------|-------------|
-| `scan_results` | Scanner output storage |
-| `threats` | Threat intelligence data |
-| `user_roles` | Role assignments (admin/analyst/viewer) |
-| `threat_doctor_conversations` | Chat conversation metadata |
-| `threat_doctor_messages` | Individual chat messages |
-| `monitoring_status` | System monitoring state |
-| `export_history` | Export operation records |
-| `realtime_logs` | System log storage |
-
 ---
 
 ## ⚡ Edge Functions
@@ -546,15 +462,6 @@ serve(async (req) => {
    ```
 
    Access at: `http://localhost:8080`
-
-### Default Test Credentials
-
-```
-Email: Avinash@tp.com
-Password: 12345678
-```
-
-**Note:** These are demo credentials. In production, use organization-specific credentials.
 
 ### Production Build
 
