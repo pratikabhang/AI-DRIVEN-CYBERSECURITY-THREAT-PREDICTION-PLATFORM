@@ -11,8 +11,6 @@
 [![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)](#architecture)
 [![API](https://img.shields.io/badge/API-REST-orange.svg)](#edge-functions)
 
-**🌐 Live Platform:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
-
 </div>
 
 ---
@@ -446,23 +444,19 @@ See [SECURITY.md](./SECURITY.md) for security policy and vulnerability reporting
 
 ## 📊 Project Resources
 
-### 📝 Code & Documentation
-
 - **SQL Tasks Implementation:** [`sql_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/sql_task.ipynb)
 - **Python AI Implementation:** [`python_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/python_task.ipynb)
 - **Model Research Paper:** [`model_research.pdf`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/model_research.pdf)
-
-### 📑 Project Management
 
 - **Platform Demo:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4)
 - **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
 - **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
 
-### 📈 Problem Statement
+## 📈 Problem Statement
 
 Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient. Organizations face challenges with delayed threat detection, overwhelming alert volumes, and limited resources for continuous security monitoring.
 
-### 🎯 Objectives
+## 🎯 Objectives
 
 - Develop AI-driven models for real-time cyber threat detection and prediction
 - Implement autonomous agents for continuous network monitoring
@@ -498,38 +492,6 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to the branch** (`git push origin feature/amazing-feature`)
-5. **Open a Pull Request**
-
-### Contribution Guidelines
-
-- Follow the existing code style and architecture
-- Add tests for new features
-- Update documentation as needed
-- Ensure all security considerations are addressed
-- Get approval from enterprise security team for sensitive changes
-
----
-
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE.txt](./LICENSE.txt) file for details.
-
----
-
-<div align="center">
-
-**Built with ❤️ for cybersecurity professionals | Enterprise-Grade Security Platform**
-
-**🌐 Live Platform:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
-
-[⬆ Back to top](#-threatpredict-ai-driven-cybersecurity-threat-prediction-platform)
-
-</div>
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
