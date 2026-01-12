@@ -55,9 +55,6 @@ I'll merge and properly structure your README file. Here's the enhanced version 
 - [🗄️ Database Schema](#-database-schema)
 - [⚡ Edge Functions](#-edge-functions)
 - [🏁 Getting Started](#-getting-started)
-- [🔐 Security](#-security)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 - [👥 Team Members](#-team-members)
 
 ---
@@ -583,62 +580,6 @@ Password: 12345678
    ```bash
    vercel --prod
    ```
-
----
-
-## 🔐 Security
-
-### Authentication & Authorization
-
-- **JWT-based authentication** with refresh tokens
-- **Multi-factor authentication** support
-- **Role-Based Access Control** (Admin, Analyst, Viewer)
-- **Session management** with automatic expiry
-- **IP-based access restrictions**
-- **Protected routes** for authenticated users
-
-### Data Protection
-
-- **End-to-end encryption** for sensitive data
-- **Row Level Security** for database isolation
-- **Secure credential storage** with hashing
-- **All API keys** stored as environment variables
-- **Comprehensive audit logging** for all operations
-
-### Enterprise Security Features
-
-- **Organization isolation** with separate data silos
-- **Custom security policies** per organization
-- **Audit trail** for all security events
-- **Compliance reporting** automation
-- **Data retention policies** with automated cleanup
-
-### Vulnerability Management
-
-- **Regular security updates** and patches
-- **Automated vulnerability scanning**
-- **Security incident response** procedures
-- **Third-party dependency monitoring**
-- **Security training** for all team members
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE.txt](LICENSE.txt) file for details.
-
 ---
 
 ## 👥 Team Members
