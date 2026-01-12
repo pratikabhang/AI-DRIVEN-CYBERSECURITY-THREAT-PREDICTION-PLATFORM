@@ -15,7 +15,7 @@
 
 ## 📹 Video Demonstration
 
-<https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/issues/1#issue-3804362970>
+<https://github.com/user-attachments/assets/5bf1d1a9-b087-4c4a-9a2e-538315609682>
 
 ---
 
