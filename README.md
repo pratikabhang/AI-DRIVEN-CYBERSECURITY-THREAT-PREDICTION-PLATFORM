@@ -84,6 +84,46 @@
 
 ---
 
+## 📊 Project Resources
+
+- **SQL Tasks Implementation:** [`sql_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/sql_task.ipynb)
+- **Python AI Implementation:** [`python_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/python_task.ipynb)
+- **Model Research Paper:** [`model_research.pdf`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/model_research.pdf)
+
+- **Platform Demo:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4)
+- **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
+- **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
+
+---
+
+## 📈 Problem Statement
+
+Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient. Organizations face challenges with delayed threat detection, overwhelming alert volumes, and limited resources for continuous security monitoring.
+
+---
+
+## 🎯 Objectives
+
+- Develop AI-driven models for real-time cyber threat detection and prediction
+- Implement autonomous agents for continuous network monitoring
+- Reduce dependency on human security analysts for routine tasks
+- Improve organizational resilience through proactive AI-based defense
+- Create an intuitive platform for comprehensive security management
+
+---
+
+## 📈 Future Scope
+
+- **Integration with more threat intelligence feeds and SIEM systems**
+- **Advanced ML models** for zero-day attack prediction
+- **Mobile application** for on-the-go security monitoring
+- **Automated incident response** and remediation workflows
+- **Blockchain-based** security log immutability
+- **IoT and industrial control system** security modules
+- **Compliance automation** for regulations (GDPR, HIPAA, PCI-DSS)
+
+---
+
 ## 🏗️ Architecture
 
 ### System Architecture Diagram
@@ -302,8 +342,6 @@ threat-predict/
 
 ```
 
----
-
 ## 🗄️ Database Schema
 
 ### Core Tables
@@ -410,46 +448,6 @@ threat-predict/
 npm run build
 npm run preview
 ```
-
----
-
-## 📊 Project Resources
-
-- **SQL Tasks Implementation:** [`sql_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/sql_task.ipynb)
-- **Python AI Implementation:** [`python_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/python_task.ipynb)
-- **Model Research Paper:** [`model_research.pdf`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/model_research.pdf)
-
-- **Platform Demo:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4)
-- **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
-- **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
-
----
-
-## 📈 Problem Statement
-
-Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient. Organizations face challenges with delayed threat detection, overwhelming alert volumes, and limited resources for continuous security monitoring.
-
----
-
-## 🎯 Objectives
-
-- Develop AI-driven models for real-time cyber threat detection and prediction
-- Implement autonomous agents for continuous network monitoring
-- Reduce dependency on human security analysts for routine tasks
-- Improve organizational resilience through proactive AI-based defense
-- Create an intuitive platform for comprehensive security management
-
----
-
-## 📈 Future Scope
-
-- **Integration with more threat intelligence feeds and SIEM systems**
-- **Advanced ML models** for zero-day attack prediction
-- **Mobile application** for on-the-go security monitoring
-- **Automated incident response** and remediation workflows
-- **Blockchain-based** security log immutability
-- **IoT and industrial control system** security modules
-- **Compliance automation** for regulations (GDPR, HIPAA, PCI-DSS)
 
 ---
 
