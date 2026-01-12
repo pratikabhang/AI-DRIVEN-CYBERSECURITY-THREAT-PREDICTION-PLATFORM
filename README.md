@@ -13,7 +13,7 @@
 
 ## 🌐 Live Deployment
 
-**Access the platform landing page:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
+**Access the platform :** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
 
 **Important Notice**: This is an **enterprise cybersecurity platform**. The login/signin functionality is exclusively available to registered organizations and companies with active subscriptions. Public user registration is not available.
 
@@ -28,9 +28,10 @@
 
 ### 📑 Project Management
 
-- **Platform Demo:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4) - Watch the full platform walkthrough and features demonstration
+- **Platform Demo:** [`demo_video.mp4`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/raw/main/documents/demo_video.mp4)
 
 - **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
+
 - **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
 
 ### 🏗️ Architecture
