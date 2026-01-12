@@ -1,22 +1,27 @@
+I'll merge and properly structure your README file. Here's the enhanced version with all information properly integrated:
+
 # 🛡️ AI-Driven Cybersecurity Threat Prediction Platform
 
 <div align="center">
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.txt)
-[![Security Policy](https://img.shields.io/badge/Security-Policy-important.svg)](SECURITY.md)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM)
-[![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Enabled-red.svg)](#)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)](#)
-[![MERN Stack](https://img.shields.io/badge/Stack-MERN-success.svg)](#-tech-stack)
-[![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)](#-architecture)
-[![API](https://img.shields.io/badge/API-REST-orange.svg)](#-edge-functions)
+![ThreatPredict](https://img.shields.io/badge/ThreatPredict-AI%20Cybersecurity-00d4ff?style=for-the-badge&logo=shield&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
+![Security Policy](https://img.shields.io/badge/Security-Policy-important.svg)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Enabled-red.svg)
+![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg)
+![MERN Stack](https://img.shields.io/badge/Stack-MERN-success.svg)
+![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)
+![API](https://img.shields.io/badge/API-REST-orange.svg)
+
+**AI-Powered Cybersecurity Intelligence Platform**
 
 </div>
 
 ## 📹 Video Demonstration
 
 <div align="center">
-  
+
 <https://github.com/user-attachments/assets/5bf1d1a9-b087-4c4a-9a2e-538315609682>
 
 </div>
@@ -28,6 +33,11 @@
 **Access Platform:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
 
 **Enterprise Access Only:** This platform is exclusively available to registered organizations with active subscriptions. Public registration is not available.
+
+**Test Credentials:**
+
+- **Email:** <Avinash@tp.com>
+- **Password:** 12345678
 
 ---
 
@@ -46,6 +56,7 @@
 - [⚡ Edge Functions](#-edge-functions)
 - [🏁 Getting Started](#-getting-started)
 - [🔐 Security](#-security)
+- [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [👥 Team Members](#-team-members)
 
@@ -304,31 +315,67 @@ threat-predict/
 ├── src/
 │   ├── components/           # Reusable components
 │   │   ├── ai/              # AI components
+│   │   │   └── MarkdownMessage.tsx
 │   │   ├── dashboard/       # Dashboard widgets
+│   │   │   ├── RiskGauge.tsx
+│   │   │   ├── StatCard.tsx
+│   │   │   ├── ThreatChart.tsx
+│   │   │   └── ThreatFeed.tsx
 │   │   ├── layout/          # Layout components
+│   │   │   └── AppLayout.tsx
 │   │   ├── scanner/         # Scanner components
 │   │   └── ui/              # UI components
 │   ├── hooks/               # Custom React hooks
-│   │   ├── useAuth.ts
+│   │   ├── useAuth.ts       # Authentication hook
 │   │   ├── useLiveThreatData.ts
-│   │   └── useSecurityStats.ts
+│   │   ├── useSecurityStats.ts
+│   │   └── useThreatDoctorChat.ts
 │   ├── integrations/        # External integrations
 │   │   └── supabase/
+│   │       ├── client.ts    # Supabase client
+│   │       └── types.ts     # Generated types
 │   ├── lib/                 # Utilities
 │   │   ├── utils.ts
 │   │   └── constants.ts
 │   ├── pages/               # Page components
 │   │   ├── ai/              # AI features
+│   │   │   ├── Predictions.tsx
+│   │   │   └── ThreatDoctor.tsx
 │   │   ├── dashboard/       # Dashboard
 │   │   ├── monitor/         # Monitoring views
+│   │   │   ├── Analytics.tsx
+│   │   │   ├── BlockedAttacks.tsx
+│   │   │   ├── GlobeView.tsx
+│   │   │   ├── LiveMap.tsx
+│   │   │   └── ThreatFeed.tsx
 │   │   ├── scanner/         # Scanners
-│   │   └── settings/        # Settings
-│   ├── types/               # TypeScript types
+│   │   │   ├── APIScanner.tsx
+│   │   │   ├── QRScanner.tsx
+│   │   │   ├── StaticScanner.tsx
+│   │   │   └── WebsiteScanner.tsx
+│   │   ├── users/           # User management
+│   │   │   └── Roles.tsx
+│   │   ├── Auth.tsx
+│   │   ├── Dashboard.tsx
+│   │   ├── Incidents.tsx
+│   │   ├── Landing.tsx
+│   │   ├── Settings.tsx
+│   │   └── Users.tsx
 │   ├── App.tsx
 │   ├── index.css
 │   └── main.tsx
 ├── supabase/
 │   ├── functions/           # Edge functions
+│   │   ├── analyze-qr/
+│   │   ├── block-entity/
+│   │   ├── export-to-cloud/
+│   │   ├── live-threat-stream/
+│   │   ├── monitor-control/
+│   │   ├── multi-agent-analysis/
+│   │   ├── scan-api/
+│   │   ├── scan-static/
+│   │   ├── scan-website/
+│   │   └── threat-doctor-chat/
 │   ├── migrations/          # Database migrations
 │   └── config.toml
 ├── tests/                   # Test files
@@ -357,7 +404,7 @@ CREATE TABLE live_attacks (
 
 -- Blocked entities
 CREATE TABLE blocked_entities (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuiduid(),
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     entity_type VARCHAR(20) CHECK (entity_type IN ('ip', 'domain', 'user')),
     entity_value VARCHAR(255) NOT NULL,
     reason TEXT,
@@ -406,6 +453,19 @@ CREATE TABLE audit_logs (
 );
 ```
 
+### Additional Tables
+
+| Table | Description |
+|-------|-------------|
+| `scan_results` | Scanner output storage |
+| `threats` | Threat intelligence data |
+| `user_roles` | Role assignments (admin/analyst/viewer) |
+| `threat_doctor_conversations` | Chat conversation metadata |
+| `threat_doctor_messages` | Individual chat messages |
+| `monitoring_status` | System monitoring state |
+| `export_history` | Export operation records |
+| `realtime_logs` | System log storage |
+
 ---
 
 ## ⚡ Edge Functions
@@ -419,6 +479,9 @@ CREATE TABLE audit_logs (
 | **live-threat-stream** | GET | `/functions/v1/live-threat-stream` | Real-time threat data |
 | **block-entity** | POST | `/functions/v1/block-entity` | Block IP/domain |
 | **export-to-cloud** | POST | `/functions/v1/export-to-cloud` | Data export service |
+| **scan-static** | POST | `/functions/v1/scan-static` | Static file analysis |
+| **monitor-control** | POST | `/functions/v1/monitor-control` | Monitoring state control |
+| **multi-agent-analysis** | POST | `/functions/v1/multi-agent-analysis` | Multi-agent threat analysis |
 
 ### Example Edge Function - Threat Doctor Chat
 
@@ -449,7 +512,7 @@ serve(async (req) => {
 ### Prerequisites
 
 - **Node.js** v18 or higher
-- **npm** v9 or higher
+- **npm** v9 or higher or **bun** package manager
 - **Supabase** account
 - **Modern web browser** (Chrome 90+, Firefox 88+, Safari 14+)
 
@@ -492,28 +555,34 @@ serve(async (req) => {
 
    Access at: `http://localhost:8080`
 
-### Deployment
+### Default Test Credentials
 
-1. **Production Build**
+```
+Email: Avinash@tp.com
+Password: 12345678
+```
+
+**Note:** These are demo credentials. In production, use organization-specific credentials.
+
+### Production Build
+
+1. **Create Production Build**
 
    ```bash
    npm run build
    ```
 
-2. **Deploy to Vercel**
+2. **Preview Production Build**
+
+   ```bash
+   npm run preview
+   ```
+
+3. **Deploy to Vercel**
 
    ```bash
    vercel --prod
    ```
-
-### Default Test Credentials
-
-```
-Email: admin@threatpredict.com
-Password: SecurePass123!
-```
-
-**Note:** These are demo credentials. In production, use organization-specific credentials.
 
 ---
 
@@ -526,14 +595,15 @@ Password: SecurePass123!
 - **Role-Based Access Control** (Admin, Analyst, Viewer)
 - **Session management** with automatic expiry
 - **IP-based access restrictions**
+- **Protected routes** for authenticated users
 
 ### Data Protection
 
 - **End-to-end encryption** for sensitive data
 - **Row Level Security** for database isolation
 - **Secure credential storage** with hashing
-- **Regular security audits** and penetration testing
-- **Compliance** with GDPR, CCPA, and other regulations
+- **All API keys** stored as environment variables
+- **Comprehensive audit logging** for all operations
 
 ### Enterprise Security Features
 
@@ -553,22 +623,32 @@ Password: SecurePass123!
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE.txt](LICENSE.txt) file for details.
 
 ---
 
 ## 👥 Team Members
 
-| Name | Role | Contribution |
-|------|------|--------------|
-| **Ashutosh** | Backend Developer | Database architecture, API development |
-| **Avinash** | Full Stack Developer | Frontend dashboard, 3D visualization |
-| **Gideon** | AI/ML Engineer | Threat prediction models, ML algorithms |
-| **Imran** | Security Analyst | Threat intelligence, Security testing |
-| **Manisha** | UI/UX Designer | User interface, Experience design |
-| **Pratik** | Project Lead | System architecture, Project management |
-| **Rajeswari** | Frontend Developer | React components, State management |
-| **Sneha** | DevOps Engineer | Deployment, CI/CD pipeline |
-| **Varnik** | QA Engineer | Testing, Security validation |
+**Ashutosh**  
+**Avinash**  
+**Gideon**  
+**Imran**  
+**Manisha**  
+**Pratik**  
+**Rajeswari**  
+**Sneha**  
+**Varnik**
