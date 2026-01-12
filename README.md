@@ -413,34 +413,6 @@ npm run preview
 
 ---
 
-## 🔐 Security
-
-### Authentication & Authorization
-
-- **JWT-based authentication** via Supabase Auth
-- **Secure session management** with auto-refresh
-- **Role-based access control (RBAC)** with three roles: `admin`, `analyst`, `viewer`
-- **Row Level Security (RLS)** policies on all tables
-- **Protected routes** for authenticated users only
-
-### Data Protection
-
-- All API keys stored as environment variables
-- Sensitive operations require admin role
-- Comprehensive audit logging
-- Domain-based authentication for enterprise security
-
-### Enterprise Security Features
-
-- **Organization-level isolation** of data
-- **Admin approval workflow** for new users
-- **Compliance-ready audit trails**
-- **Data encryption** at rest and in transit
-
-See [SECURITY.md](./SECURITY.md) for security policy and vulnerability reporting.
-
----
-
 ## 📊 Project Resources
 
 - **SQL Tasks Implementation:** [`sql_task.ipynb`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/sql_task.ipynb)
@@ -492,6 +464,34 @@ Modern cybersecurity systems heavily rely on human analysts, making them slow, r
 - **Rajeswari**
 - **Sneha**
 - **Varnik**
+
+---
+
+## 🔐 Security
+
+### Authentication & Authorization
+
+- **JWT-based authentication** via Supabase Auth
+- **Secure session management** with auto-refresh
+- **Role-based access control (RBAC)** with three roles: `admin`, `analyst`, `viewer`
+- **Row Level Security (RLS)** policies on all tables
+- **Protected routes** for authenticated users only
+
+### Data Protection
+
+- All API keys stored as environment variables
+- Sensitive operations require admin role
+- Comprehensive audit logging
+- Domain-based authentication for enterprise security
+
+### Enterprise Security Features
+
+- **Organization-level isolation** of data
+- **Admin approval workflow** for new users
+- **Compliance-ready audit trails**
+- **Data encryption** at rest and in transit
+
+See [SECURITY.md](./SECURITY.md) for security policy and vulnerability reporting.
 
 ---
 
