@@ -11,8 +11,6 @@
 [![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)](#-architecture)
 [![API](https://img.shields.io/badge/API-REST-orange.svg)](#-edge-functions)
 
-**Enterprise-Grade AI Security Platform · Real-Time Threat Intelligence · Proactive Defense**
-
 </div>
 
 ## 📹 Video Demonstration
@@ -21,7 +19,6 @@
   
 <https://github.com/user-attachments/assets/5bf1d1a9-b087-4c4a-9a2e-538315609682>
 
-*[Click to watch full platform demo]*
 </div>
 
 ---
@@ -30,7 +27,7 @@
 
 **Access Platform:** [ai-threatpredict.vercel.app](https://ai-threatpredict.vercel.app/)
 
-**⚠️ Enterprise Access Only:** This platform is exclusively available to registered organizations with active subscriptions. Public registration is not available.
+**Enterprise Access Only:** This platform is exclusively available to registered organizations with active subscriptions. Public registration is not available.
 
 ---
 
@@ -167,26 +164,15 @@ Organizations need intelligent, automated systems that can predict, detect, and 
 
 ## 📈 Future Scope
 
-### Phase 1: Enhanced Intelligence (Q3 2024)
-
 - **Zero-Day Prediction**: Advanced ML models for unknown threats
 - **SIEM Integration**: Connect with Splunk, QRadar, ArcSight
 - **Mobile Application**: iOS/Android security monitoring
-
-### Phase 2: Automated Response (Q4 2024)
-
 - **SOAR Integration**: Security Orchestration and Automated Response
 - **Blockchain Logging**: Immutable security audit trails
 - **IoT Security**: Industrial control system protection
-
-### Phase 3: Global Expansion (Q1 2025)
-
 - **Multi-cloud Support**: AWS, Azure, GCP native integration
 - **Compliance Automation**: GDPR, HIPAA, PCI-DSS compliance tools
 - **Threat Intelligence Sharing**: Global security collaboration network
-
-### Phase 4: Advanced Capabilities (Q2 2025)
-
 - **Quantum-safe Cryptography**: Post-quantum security algorithms
 - **Predictive Analytics**: Business impact forecasting
 - **Autonomous Pentesting**: AI-driven vulnerability assessment
