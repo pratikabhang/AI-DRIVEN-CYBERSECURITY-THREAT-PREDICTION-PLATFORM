@@ -1,10 +1,7 @@
-I'll merge and properly structure your README file. Here's the enhanced version with all information properly integrated:
-
 # 🛡️ AI-Driven Cybersecurity Threat Prediction Platform
 
 <div align="center">
 
-![ThreatPredict](https://img.shields.io/badge/ThreatPredict-AI%20Cybersecurity-00d4ff?style=for-the-badge&logo=shield&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Security Policy](https://img.shields.io/badge/Security-Policy-important.svg)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
@@ -13,8 +10,6 @@ I'll merge and properly structure your README file. Here's the enhanced version 
 ![MERN Stack](https://img.shields.io/badge/Stack-MERN-success.svg)
 ![Supabase](https://img.shields.io/badge/Backend-Supabase-darkgreen.svg)
 ![API](https://img.shields.io/badge/API-REST-orange.svg)
-
-**AI-Powered Cybersecurity Intelligence Platform**
 
 </div>
 
