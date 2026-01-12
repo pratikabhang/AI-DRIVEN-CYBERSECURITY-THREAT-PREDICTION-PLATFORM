@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 185 100% 50%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 185 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Severity colors */
+    --critical: 0 84% 60%;
+    --high: 25 95% 53%;
+    --medium: 48 96% 53%;
+    --low: 142 76% 36%;
+    --info: 199 89% 48%;
+
+    /* Success/Warning */
+    --success: 142 76% 36%;
+    --warning: 25 95% 53%;
+
+    /* Chart colors */
+    --chart-1: 185 100% 50%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 48 96% 53%;
+    --chart-4: 25 95% 53%;
+    --chart-5: 0 84% 60%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 185 100% 50%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 185 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-card/50 backdrop-blur-sm;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-left font-semibold text-muted-foreground border-b border-border bg-muted/30;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 border-b border-border/50;
+  }
+
+  .data-table tr:hover {
+    @apply bg-muted/20;
+  }
+
+  /* Severity badge utilities */
+  .bg-critical {
+    background-color: hsl(var(--critical));
+  }
+  .bg-high {
+    background-color: hsl(var(--high));
+  }
+  .bg-medium {
+    background-color: hsl(var(--medium));
+  }
+  .bg-low {
+    background-color: hsl(var(--low));
+  }
+  .bg-info {
+    background-color: hsl(var(--info));
+  }
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+
+  .text-critical {
+    color: hsl(var(--critical));
+  }
+  .text-high {
+    color: hsl(var(--high));
+  }
+  .text-medium {
+    color: hsl(var(--medium));
+  }
+  .text-low {
+    color: hsl(var(--low));
+  }
+  .text-info {
+    color: hsl(var(--info));
+  }
+  .text-success {
+    color: hsl(var(--success));
+  }
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+}
