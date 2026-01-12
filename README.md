@@ -362,7 +362,6 @@ threat-predict/
 - **Node.js** v18 or higher
 - **npm** or **bun** package manager
 - **Supabase** account (for backend services)
-- **Enterprise subscription** (required for platform access)
 
 ### Installation
 
@@ -452,9 +451,13 @@ See [SECURITY.md](./SECURITY.md) for security policy and vulnerability reporting
 - **Project Presentation:** [`project_presentation.pptx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_presentation.pptx)
 - **Agile Project Documentation:** [`project_agile_document.xlsx`](https://github.com/pratikabhang/AI-DRIVEN-CYBERSECURITY-THREAT-PREDICTION-PLATFORM/blob/main/documents/project_agile_document.xlsx)
 
+---
+
 ## 📈 Problem Statement
 
 Modern cybersecurity systems heavily rely on human analysts, making them slow, reactive, and error-prone. With the increasing scale and complexity of cyber-attacks, manual monitoring is no longer sufficient. Organizations face challenges with delayed threat detection, overwhelming alert volumes, and limited resources for continuous security monitoring.
+
+---
 
 ## 🎯 Objectives
 
